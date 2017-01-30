@@ -1,0 +1,14 @@
+meta charset="utf-8"
+
+- title       = yield(:title)
+- description = yield(:description)
+- image       = yield(:image)
+- keywords    = yield(:keywords)
+- current_url = request.original_url
+
+- set_meta_tags MetaData.new(title: title, 
+                             description: description, 
+                             image: image,
+                             keywords: keywords,
+                             current_url: current_url).seo
+= display_meta_tags
