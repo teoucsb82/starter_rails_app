@@ -9,6 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'meta-tags'
 gem 'rails', '4.2.3'
+gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
