@@ -33,7 +33,7 @@ class MetaData
       },
       icon: [
         { href: '/images/icons/icon_96.png', sizes: '32x32 96x96', type: 'image/png' },
-        { href: '/images/icons/icon_itouch_precomp_32.png', rel: 'apple-touch-icon-precomposed', sizes: '32x32', type: 'image/png' },
+        { href: '/images/icons/icon_itouch_precomp_32.png', rel: 'apple-touch-icon-precomposed', sizes: '32x32', type: 'image/png' }
       ]
     }
   end
