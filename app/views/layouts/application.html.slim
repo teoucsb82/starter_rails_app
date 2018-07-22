@@ -4,7 +4,7 @@ html
     meta charset='utf-8'
     = render 'layouts/meta'
     = stylesheet_link_tag 'application', media: 'all'
-    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'
+    = stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'
     = csrf_meta_tags
     meta name='viewport' content='width=device-width, initial-scale=1' 
   body
@@ -12,6 +12,8 @@ html
     .container
       = render 'layouts/flash'
       = yield
-    = javascript_include_tag 'application', async: Rails.env.production?
-    = javascript_include_tag 'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js', async: Rails.env.production?
-    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', async: Rails.env.production?
+    - async = Rails.env.production?
+    = javascript_include_tag 'application', async: async
+    = javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js', async: async
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', async: async
+    = javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js', async: async

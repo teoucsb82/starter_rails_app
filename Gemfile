@@ -1,15 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.5.1'
 
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'jquery-rails'
 gem 'meta-tags'
 gem 'rails', '4.2.3'
-gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
