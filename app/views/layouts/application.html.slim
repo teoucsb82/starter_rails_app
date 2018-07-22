@@ -11,7 +11,8 @@ html
     = render 'layouts/header'
     .container
       = render 'layouts/flash'
-      = yield
+      .mt-3
+        = yield
     - async = Rails.env.production?
     = javascript_include_tag 'application', async: async
     = javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js', async: async

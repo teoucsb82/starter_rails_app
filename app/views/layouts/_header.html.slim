@@ -1,17 +1,33 @@
-nav.navbar.navbar-toggleable.navbar-fixed-top.navbar-inverse.bg-primary
-  button.navbar-toggler.navbar-toggler-right aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button" 
-    span.navbar-toggler-icon
-  a.navbar-brand href="#"  Navbar
-  #navbarNavAltMarkup.collapse.navbar-collapse
-    .navbar-nav
-      a.nav-item.nav-link.active href="#" 
-        | Home
-        span.sr-only (current)
-      a.nav-item.nav-link href="#"  Features
-      a.nav-item.nav-link href="#"  Pricing
-      a.nav-item.nav-link.disabled href="#"  Disabled
-      - if user_signed_in?
-        = link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link'
-      - else
-        = link_to 'Log In', new_user_session_path, class: 'nav-item nav-link'
-        = link_to 'Register', new_user_registration_path, class: 'nav-item nav-link'
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container
+    a.navbar-brand href="#"  Brand
+    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          = link_to "Home", root_url, class: 'nav-link'
+        li.nav-item
+          a.nav-link href="#"  Link
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            | Dropdown
+          .dropdown-menu aria-labelledby="navbarDropdown" 
+            a.dropdown-item href="#"  Action
+            a.dropdown-item href="#"  Another action
+            .dropdown-divider
+            a.dropdown-item href="#"  Something else here
+        li.nav-item
+          a.nav-link.disabled href="#"  Disabled
+      ul.navbar-nav
+        - if user_signed_in?
+          li.nav-item
+            = link_to 'Log Out',
+              destroy_user_session_path,
+              method: :delete,
+              class: 'nav-link'
+        - else
+          li.nav-item
+            = link_to 'Log In', new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to 'Register', new_user_registration_path, class: 'nav-link'
